@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TallerApisCinema.Views.ResumenPage"
+             Title="Resumen Compra">
+
+    <Grid>
+        
+        <Grid x:Name="gridPelicula" Grid.Row="0">
+            <Image Source="{Binding Imagen}" Grid.Row="0" Grid.ColumnSpan="2"/>
+            <Label Text="Pelicula" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="Titulo:" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="{Binding Nombre}" Grid.Column="1" Grid.Row="2"/>
+            <Label Text="Fecha:" Grid.Column="0" Grid.Row="3"/>
+            <Label Text="{Binding FechaActual}" Grid.Column="1" Grid.Row="3"/>
+        </Grid>
+
+        <Grid x:Name="gridFuncion" Grid.Row="1">
+            <Label Text="Funcion" Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Cinema:" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="{Binding Cinema}" Grid.Column="1" Grid.Row="1"/>
+            <Label Text="Sala:" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="{Binding Sala}" Grid.Column="1" Grid.Row="2"/>
+            <Label Text="Ciudad:" Grid.Column="0" Grid.Row="3"/>
+            <Label Text="{Binding Ciudad}" Grid.Column="1" Grid.Row="3"/>
+            <Label Text="Tickets" Grid.Column="0" Grid.Row="4 "/>
+            <Label Text="Precio:" Grid.Column="0" Grid.Row="5"/>
+            <Label Text="{Binding Precio}" Grid.Column="1" Grid.Row="5"/>
+            <Label Text="Cantidad:" Grid.Column="0" Grid.Row="6"/>
+            <Label x:Name="Cantidad" Text="" Grid.Column="1" Grid.Row="6"/>
+            <Label Text="Total A Pagar:" Grid.Column="0" Grid.Row="7"/>
+            <Label x:Name="TotalPagar" Text="" Grid.Column="1" Grid.Row="7"/>
+            <Button Text="Finalizar Compra" Grid.ColumnSpan="2" Grid.Row="8" Clicked="Finalizar_Click"/>
+        </Grid>
+    </Grid>
+    
+</ContentPage>

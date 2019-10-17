@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TallerApisCinema.Views.FuncionesPage"
+             Title="Funciones ">
+    
+    <StackLayout Orientation="Vertical">
+        
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Titullo: "/>
+            <Label Text="{Binding Nombre}"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="Fecha: "/>
+            <Label Text="{Binding FechaActual}"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="Cantidad Boletas: "/>
+            <Entry x:Name="CantidadBoletas" Keyboard="Numero"/>
+        </StackLayout>
+
+        <ListView ItemsSource="{Binding Funciones}" ItemSelected="Funcion_Selected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Cinema}"/>
+                                <Label Text=" - "/>
+                                <Label Text="{Binding Sala}"/>
+                                <Label Text=" - "/>
+                                <Label Text="{Binding Ciudad}"/>
+                            </StackLayout>
+                            <Label Text="{Binding Precio}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+    
+</ContentPage>
